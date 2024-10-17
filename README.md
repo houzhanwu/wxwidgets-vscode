@@ -70,3 +70,11 @@ If you need any assistance or have questions regarding this project, feel free t
 If you find this project helpful or interesting, consider giving it a star on GitHub. Also, sharing it with others who might benefit from it would be greatly appreciated.
 
 Thank you for your interest in this project.
+
+
+
+
+
+ git config --global http.sslVerify false
+
+ git push --set-upstream origin master  

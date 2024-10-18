@@ -15,6 +15,23 @@
 #include "api/json/json/json.h"
 
 
+
+
+#include <wx/webview.h>
+
+#include <wx/filename.h>
+
+
+// #include <wx/splitter.h>
+// #include "include/cef_app.h"
+// #include "include/cef_client.h"
+// #include "include/cef_browser.h"
+
+
+
+
+
+
 class MyApp : public wxApp 
 {
 public:
@@ -32,6 +49,11 @@ private:
 
 
     void LogToFile(const std::string& message);
+
+
+protected:
+   
+    
 };
 
 enum
@@ -112,6 +134,57 @@ void MyFrame::OnHello(wxCommandEvent& event)
         LogToFile(out);
         LogToFile("Application end.");
     }
+
+
+
+    // TODO 打开本地html 或者 网址
+    // html = new wxHtmlWindow(this);
+    // //wxHtmlWindow *m_htmlWin2 = new wxHtmlWindow(this, wxID_ANY, wxDefaultPosition, wxSize(500,300), wxHW_SCROLLBAR_AUTO);
+    // // 加载本地 HTML 文件
+    // wxString htmlFilePath = "resource/web/index.html"; // 替换为你的 HTML 文件路径
+    // html->LoadPage(htmlFilePath);
+
+
+
+    wxFrame* frame = new wxFrame(nullptr, wxID_ANY, "111", wxPoint(0, 0), wxSize(800, 600));
+  
+    //bool IsBackendAvailable = wxWebView::IsBackendAvailable(wxWebViewBackendEdge);
+    //判断后端是否可用
+    //if (IsBackendAvailable) {
+        //创建一个webview
+        wxWebView* web = wxWebView::New(frame, wxID_ANY);
+        //加载网址
+        web->LoadURL("http://www.baidu.com");
+        //web->LoadURL("file://D://workspace_lims/wxwidgets-vscode/resource/web/index.html");
+// 使用相对路径
+        // wxString relativePath = "resource/web/index.html";
+        // wxFileName fileName(relativePath);
+        // wxString fileURL = wxString::Format("file://%s", fileName.GetFullPath());
+        // web->LoadURL(relativePath);
+  // 绑定事件
+        // web->Bind(wxEVT_WEBVIEW_NAVIGATING, [](wxWebViewEvent& event) {
+        //     wxLogMessage("Navigating to: %s", event.GetURL());
+        // });
+
+        // web->Bind(wxEVT_WEBVIEW_NAVIGATED, [](wxWebViewEvent& event) {
+        //     wxLogMessage("Navigated to: %s", event.GetURL());
+        // });
+
+        // web->Bind(wxEVT_WEBVIEW_ERROR, [](wxWebViewEvent& event) {
+        //     wxLogError("Error loading: %s", event.GetURL());
+        // });
+
+
+    // }
+    //显示窗口
+    frame->Show(true);
+    //wxLogMessage("111 %u", IsBackendAvailable);
+
+
+
+
+
+
 
 
     // stlstring 转 json 对象

@@ -92,11 +92,24 @@
                     "-L${workspaceFolder}\\dep\\win\\lib\\gcc_lib",
                     "-LC:\\mingw64\\x86_64-w64-mingw32\\lib",
                     "-mwindows",
-                    "-static",                                        
+                    "-static",   
                     "${workspaceFolder}\\out\\**.o",
                     "-o",
                     "${workspaceFolder}\\out\\myapp.exe",
+                  
+                    
+                    
+                    "-lwxmsw32u_webview",
+
+
                     "-lwxmsw32u_core",
+
+                    "-lwxmsw32u_html",
+                    "-lwxmsw32u_stc",
+                    "-lwxbase32u",
+                    "-lwxscintilla",
+                    
+
                     "-lwxbase32u",
                     "-lwxpng",
                     "-lcomdlg32",
@@ -113,10 +126,15 @@
                     "-luxtheme",
                     "-loleacc",
                     "-lshlwapi",
-                    "-lversion"
+                    "-lversion",
                     
                     
-                    ,"-lws2_32"
+                    "-lws2_32",
+                    //"-lcef"
+                    "-lole32",
+                    "-loleaut32",
+                    "-luuid"
+                    
                 ],
               },
             "group": {

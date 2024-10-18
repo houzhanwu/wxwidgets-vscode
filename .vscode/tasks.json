@@ -114,6 +114,9 @@
                     "-loleacc",
                     "-lshlwapi",
                     "-lversion"
+                    
+                    
+                    ,"-lws2_32"
                 ],
               },
             "group": {

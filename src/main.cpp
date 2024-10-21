@@ -29,7 +29,7 @@
 
 
 
-
+#include "MainPanel.h"
 
 
 class MyApp : public wxApp 
@@ -101,7 +101,13 @@ void MyFrame::OnExit(wxCommandEvent& event)
 
 void MyFrame::OnAbout(wxCommandEvent& event)
 {
-    wxMessageBox("This is a wxWidgets Hello World example", "About Hello World", wxOK | wxICON_INFORMATION);
+    //wxMessageBox("This is a wxWidgets Hello World example", "About Hello World", wxOK | wxICON_INFORMATION);
+
+
+    MainPanel * mainPanel = new MainPanel(this);
+    mainPanel->Show();
+
+    
 }
 
 void MyFrame::OnHello(wxCommandEvent& event)

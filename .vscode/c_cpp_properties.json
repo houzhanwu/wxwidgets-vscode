@@ -6,8 +6,8 @@
                 "${workspaceFolder}/src/**",
                 "${workspaceFolder}/dep/win/lib/gcc_lib/mswu",
                 "${workspaceFolder}/dep/win/include",
-                "${workspaceFolder}/dep/win/3rdparty/cef/include",
-                "${workspaceFolder}/dep/win/3rdparty/cef"
+                // "${workspaceFolder}/dep/win/3rdparty/cef/include",
+                // "${workspaceFolder}/dep/win/3rdparty/cef"
             ],
             "defines": [
                 "_WINDOWS",
